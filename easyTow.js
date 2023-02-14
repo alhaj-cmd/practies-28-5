@@ -8,7 +8,7 @@ document.getElementById('btn-click').addEventListener('click', function(){
     // heading tag with discount 1000
    
     const newDiscounts = newDiscount.innerText;
-    if(newDiscountBalance =='DISC30'){
+    if(newDiscountBalance =='DISC30' ){
         newDiscountValue.value = ' ';
         // console.log('hello');
         const discount = parseFloat(1000-(newDiscounts)*0.3);
@@ -16,6 +16,7 @@ document.getElementById('btn-click').addEventListener('click', function(){
         const discountCurrentAmount = document.getElementById('discount');
         const discountCurrent = discountCurrentAmount.innerText;
         // console.log(discountCurrent)
+        // discountCurrentAmount.innerText =' ';
         const discountTotals = parseFloat(discountCurrent)
         // console.log(discountTotals)
         const discountTotal = discount + discountTotals;
@@ -25,26 +26,21 @@ document.getElementById('btn-click').addEventListener('click', function(){
     else{
         alert('It is not validation. please!! correct your Text');
         newDiscountValue.value = ' ';
-        const discounts = newDiscount;
-        const discount =parseFloat(discounts);
-        console.log(discount);
+        // console.log('ami asi')
+        const discount = parseFloat(newDiscounts);
+        // console.log(discount);
         const discountCurrentAmount = document.getElementById('discount');
         const discountCurrent = discountCurrentAmount.innerText;
-        const discountTotal = discount + discountCurrent;
-        const discountTotals = parseFloat(discountTotal)
-        console.log(discountTotals)
-        discountCurrentAmount.innerText = discountTotals;
+        // console.log(discountCurrent)
+        // discountCurrentAmount.innerText = ' ';
+        const discountTotals = parseFloat(discountCurrent)
+        // console.log(discountTotals)
+        const discountTotal = discount + discountTotals;
+        // console.log(discountTotal)
+        discountCurrentAmount.innerText = discountTotal;
+        // discountCurrentAmount.innerText = ' ';
+        
+       
     }
-    // const newDiscounts = newDiscount.innerText;
-   
-    // const discount = parseFloat(1000-(newDiscounts)*0.3);
-    // console.log(discount);
-    // const discountAmount =1000-discount;
-    // const discountCurrentAmount = document.getElementById('discount');
-    // const discountCurrent = discountCurrentAmount.innerText;
-    // const discountTotal = discount + discountCurrentAmount;
-    // const discountTotals = parseFloat(discountTotal)
-    // console.log(discountTotals)
-    // discountCurrentAmount.innerText = discountTotals;
 
 })
