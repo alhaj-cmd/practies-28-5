@@ -8,12 +8,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <section class="contaner w-3/9">
+    <section class="contaner w-3/9 ">
+
+        <!-- <select class="select" name="discount" onchange="updateInput()">
+            <option value="5" selected>5% discount</option>
+            <option value="10">10% discount</option>
+             <option value="20">20% discount</option>
+         </select> -->
+        
+
         <div class="text-center bg-green-300 p-8 text-white mx-auto">
+            <input class="text-gray-900" type="text" name="price" >
             <h2 class="text-3xl mb-4">Price: $<span id="price">1000</span></h2>
             <button id="btn-click" class="p-4 mb-4 bg-orange-300 ro
             unded-lg">Apply</button>
             <h3 class="text-5xl">Please Pay : $<span id="discount">00</span> </h3>
+            
         </div>
     </section>
     <!-- js added in the functional -->
@@ -22,8 +32,35 @@
         document.getElementById('btn-click').addEventListener('click', function(){
             console.log('click');
             const newDiscount = document.getElementById('price');
-            console.log(newDiscount);
+            // console.log(newDiscount);
+            const newDiscounts = newDiscount.innerText;
+           
+            const discount = parseFloat(1000-(newDiscounts)*0.3);
+            console.log(discount);
+            // const discountAmount =1000-discount;
+            const discountCurrentAmount = document.getElementById('discount');
+            const discountCurrent = discountCurrentAmount.innerText;
+            const discountTotal = discount + discountCurrentAmount;
+            const discountTotals = parseFloat(discountTotal)
+            console.log(discountTotals)
+            discountCurrentAmount.innerText = discountTotals;
+        
+
+
+            
+            
+
         })
+
+
+//         function updateInput(){
+//     //get the current amount from the 'discount' field
+//     var discount = document.getElementsByName("discount")[0].value;
+//     //get the current amount from the 'price' field
+//     var currentPrice = document.getElementsByName("price")[0].value;
+//     //new price should be "old price" - "discount%" * "old price"
+//     document.getElementsByName("price")[0].value =  currentPrice - ((discount/100) * currentPrice);
+// }
     </script>
 </body>
 </html>
