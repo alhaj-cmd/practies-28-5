@@ -22,6 +22,8 @@ document.getElementById('btn-click').addEventListener('click', function(){
         const discountTotal = discount + discountTotals;
         // console.log(discountTotal)
         discountCurrentAmount.innerText = discountTotal;
+        
+        
     }
     else{
         alert('It is not validation. please!! correct your Text');
